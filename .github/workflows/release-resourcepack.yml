@@ -1,0 +1,45 @@
+name: Release resourcepack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ResourcePack/ICTSMP-resourcepack.zip"
+  workflow_dispatch: # handmatig starten via de Actions-tab
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Bereken SHA-1
+        id: hash
+        run: |
+          SHA1=$(sha1sum ResourcePack/ICTSMP-resourcepack.zip | cut -d' ' -f1)
+          echo "sha1=$SHA1" >> "$GITHUB_OUTPUT"
+
+      - name: Maak release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="pack-${{ github.run_number }}"
+          URL="https://github.com/${{ github.repository }}/releases/download/${TAG}/ICTSMP-resourcepack.zip"
+
+          gh release create "$TAG" ResourcePack/ICTSMP-resourcepack.zip \
+            --title "Resourcepack $TAG" \
+            --notes "**SHA-1:** \`${{ steps.hash.outputs.sha1 }}\`
+
+          \`\`\`
+          resource-pack=${URL}
+          resource-pack-sha1=${{ steps.hash.outputs.sha1 }}
+          \`\`\`"
+
+      - name: Samenvatting
+        run: |
+          echo "### Nieuwe resourcepack release" >> "$GITHUB_STEP_SUMMARY"
+          echo "SHA-1: \`${{ steps.hash.outputs.sha1 }}\`" >> "$GITHUB_STEP_SUMMARY"

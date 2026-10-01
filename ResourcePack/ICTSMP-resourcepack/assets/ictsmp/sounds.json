@@ -1,0 +1,101 @@
+{
+  "tutorial.welkom": {
+    "subtitle": "Voice-over: welkom",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/welkom",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.regels": {
+    "subtitle": "Voice-over: de regels",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/regels",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.lifesteal": {
+    "subtitle": "Voice-over: lifesteal",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/lifesteal",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.windhaven": {
+    "subtitle": "Voice-over: Windhaven",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/windhaven",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.quest_wilg": {
+    "subtitle": "Voice-over: Moeder Wilg",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/quest_wilg",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.schim": {
+    "subtitle": "Voice-over: de Schim",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/schim",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.schim_joris": {
+    "subtitle": "Voice-over: Oude Joris",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/schim_joris",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.teams": {
+    "subtitle": "Voice-over: teams",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/teams",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.domes": {
+    "subtitle": "Voice-over: domes",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/domes",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.weekregels": {
+    "subtitle": "Voice-over: weekregels",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/weekregels",
+        "stream": true
+      }
+    ]
+  },
+  "tutorial.einde": {
+    "subtitle": "Voice-over: einde",
+    "sounds": [
+      {
+        "name": "ictsmp:tutorial/einde",
+        "stream": true
+      }
+    ]
+  }
+}
